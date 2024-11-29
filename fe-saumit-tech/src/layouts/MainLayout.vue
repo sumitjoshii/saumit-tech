@@ -1,41 +1,52 @@
 <template>
   <q-layout view="lHh Lpr lFf" style="overflow-x: auto; position: relative">
     <q-toolbar class="custom-toolbar">
-      <q-toolbar-title>Sumit Joshi</q-toolbar-title>
       <q-btn
         flat
-        label="Edu."
-        :class="{ active: activeSection === 'eduSection' }"
-        @click="scrollTo('eduSection')"
-        class="q-ml-md"
-      />
-      <q-btn
-        flat
-        label="Experience"
-        :class="{ active: activeSection === 'expSection' }"
-        @click="scrollTo('expSection')"
-        class="q-ml-md"
-      />
-      <q-btn
-        flat
-        label="Projects"
-        :class="{ active: activeSection === 'projectSection' }"
-        @click="scrollTo('projectSection')"
-        class="q-ml-md"
-      />
-      <q-btn
-        flat
-        label="Skills"
-        :class="{ active: activeSection === 'skillsSection' }"
-        @click="scrollTo('skillsSection')"
-        class="q-ml-md"
-      />
-      <q-btn flat label="Resume" class="q-ml-md" @click="openResume">
-        <font-awesome-icon
-          icon="fa-solid fa-up-right-from-square"
-          class="q-ml-xs"
-        />
+        class="q-toolbar-title-btn"
+        :class="{ active: activeSection === 'top' }"
+        @click="scrollToTop"
+      >
+        <q-toolbar-title>Sumit Joshi</q-toolbar-title>
       </q-btn>
+      <!-- Header Button -->
+      <div style="display: flex; align-items: center; margin-left: auto">
+        <q-btn
+          flat
+          label="Education"
+          :class="{ active: activeSection === 'eduSection' }"
+          @click="scrollTo('eduSection')"
+          class="q-ml-md"
+        />
+        <q-btn
+          flat
+          label="Experience"
+          :class="{ active: activeSection === 'expSection' }"
+          @click="scrollTo('expSection')"
+          class="q-ml-md"
+        />
+
+        <q-btn
+          flat
+          label="Skills"
+          :class="{ active: activeSection === 'skillsSection' }"
+          @click="scrollTo('skillsSection')"
+          class="q-ml-md"
+        />
+        <q-btn
+          flat
+          label="Projects"
+          :class="{ active: activeSection === 'projectSection' }"
+          @click="scrollTo('projectSection')"
+          class="q-ml-md"
+        />
+        <q-btn flat label="Resume" class="q-ml-md" @click="openResume">
+          <font-awesome-icon
+            icon="fa-solid fa-up-right-from-square"
+            class="q-ml-xs"
+          />
+        </q-btn>
+      </div>
     </q-toolbar>
 
     <div class="intro-box" :style="{ zIndex: introZIndex }">
@@ -46,10 +57,9 @@
         love creating impactful user experiences.
       </p>
       <!-- Socials -->
-      <!-- Socials -->
       <div class="socials">
         <a
-          href="mailto:sumit@example.com"
+          href="mailto:sumit.jsvp@gmail.com"
           class="icon mail"
           target="_blank"
           aria-label="Email"
@@ -57,7 +67,7 @@
           <font-awesome-icon icon="fa-solid fa-envelope" />
         </a>
         <a
-          href="https://linkedin.com/in/sumit"
+          href="https://www.linkedin.com/in/sumit-joshi1/"
           class="icon linkedin"
           target="_blank"
           aria-label="LinkedIn"
@@ -65,7 +75,7 @@
           <font-awesome-icon icon="fa-brands fa-linkedin" />
         </a>
         <a
-          href="https://github.com/sumit"
+          href="https://github.com/SumitJoshii"
           class="icon github"
           target="_blank"
           aria-label="GitHub"
@@ -73,7 +83,7 @@
           <font-awesome-icon icon="fa-brands fa-github" />
         </a>
         <a
-          href="https://x.com/sumit"
+          href="https://x.com/sumitjoshiix"
           class="icon x"
           target="_blank"
           aria-label="Twitter"
@@ -179,10 +189,20 @@ onMounted(() => {
   }, 2000); // Change word every 2 seconds
 });
 
-const activeSection = ref('eduSection'); // Default active section
+const activeSection = ref('top'); // Default active section
+const scrollToTop = () => {
+  activeSection.value = 'top';
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+  console.log('Scrolled to top');
+};
 // Function to update the active section on scroll
 const updateActiveSection = () => {
   const sections = [
+    'top',
     'eduSection',
     'expSection',
     'projectSection',
@@ -191,6 +211,10 @@ const updateActiveSection = () => {
   const scrollPosition = window.scrollY + 110; // Adjust for 100px offset + buffer
   for (const section of sections) {
     const element = document.getElementById(section);
+    if (window.scrollY <= 120) {
+      activeSection.value = 'top';
+      console.log('Top active!');
+    }
     if (
       element &&
       scrollPosition >= element.offsetTop &&
@@ -374,14 +398,14 @@ const openResume = () => {
 }
 
 .socials {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 20px; /* Spacing between icons */
 }
 
 .socials .icon {
-  font-size: 24px; /* Adjust icon size */
+  font-size: 30px; /* Adjust icon size */
   color: #ffffff; /* Default icon color */
   text-decoration: none; /* Remove underline */
   transition: transform 0.3s ease, color 0.3s ease;

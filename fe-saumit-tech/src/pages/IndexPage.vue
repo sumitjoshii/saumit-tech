@@ -101,15 +101,109 @@
           </div>
         </div>
       </div>
-      <div class="project inner-div" id="projectSection">
-        <p>Project</p>
-      </div>
       <div class="skills inner-div" id="skillsSection">
-        <p>Skills</p>
+        <div class="tech-skills">
+          <div class="logo python">
+            <img
+              width="240"
+              height="240"
+              src="https://img.icons8.com/color/240/python.png"
+              alt="python"
+            />
+          </div>
+          <div class="logo django">
+            <img
+              width="240"
+              height="240"
+              src="https://img.icons8.com/ios/500/django.png"
+              alt="django"
+              style="filter: invert(100%) brightness(2)"
+            />
+          </div>
+          <div class="logo vue">
+            <img
+              width="100"
+              height="100"
+              src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
+              alt="vue"
+            />
+          </div>
+          <div class="logo js">
+            <img
+              width="140"
+              height="140"
+              src="https://img.icons8.com/color/240/javascript--v1.png"
+              alt="javascript"
+            />
+          </div>
+          <!-- <div class="logo sql" style="left: 75%; top: 28%">
+            <img
+              width="100"
+              height="100"
+              src="https://img.icons8.com/ios-filled/100/sql.png"
+              alt="sql"
+              style="filter: invert(100%) brightness(2)"
+            />
+          </div> -->
+          <div class="logo aws">
+            <img
+              width="90"
+              height="90"
+              src="https://img.icons8.com/color/240/amazon-web-services.png"
+              alt="aws"
+              style="
+                background-color: aliceblue;
+                border-radius: 30%;
+                padding: 4px;
+              "
+            />
+          </div>
+          <div class="logo git">
+            <img
+              width="120"
+              height="120"
+              src="https://img.icons8.com/ios-filled/250/git.png"
+              alt="git"
+              style="filter: invert(100%) brightness(2)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="project inner-div" id="projectSection">
+        <div class="all-projects"></div>
       </div>
     </div>
   </q-page>
 </template>
+
+<script setup>
+import { onMounted } from 'vue';
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const logos = document.querySelectorAll('.logo');
+        if (entry.isIntersecting) {
+          logos.forEach((logo) => logo.classList.add('animate'));
+        } else {
+          logos.forEach((logo) => logo.classList.remove('animate'));
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  const skillsSection = document.getElementById('skillsSection');
+  if (skillsSection) {
+    observer.observe(skillsSection);
+  } else {
+    console.error('Skills section not found!');
+  }
+});
+</script>
 
 <style scoped>
 .scroll-div {
@@ -226,5 +320,90 @@
   font-family: 'Courier New', Courier, monospace;
   text-align: left;
   font-size: 20px;
+}
+
+.skills {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 15, 73);
+  padding-bottom: 100px;
+}
+
+.tech-skills {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 40%; /* Starting position for all logos */
+  top: 25%; /* Behind the Python logo */
+  transition: all 1s ease; /* Smooth animation */
+}
+
+.logo.python {
+  left: 40%; /* Final position (no change for Python) */
+  top: 25%;
+}
+
+.logo.django.animate {
+  left: 25%; /* Target position */
+  top: 50%;
+}
+
+.logo.vue.animate {
+  left: 33%;
+  top: 33%;
+}
+
+.logo.js.animate {
+  left: 59%;
+  top: 55%;
+}
+
+.logo.aws.animate {
+  left: 48%;
+  top: 74%;
+}
+
+.logo.git.animate {
+  left: 58%;
+  top: 28%;
+}
+
+.logo:hover {
+  background-color: aqua;
+}
+
+/* Floating animation (up and down) */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Rotating animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 </style>
