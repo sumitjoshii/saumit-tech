@@ -132,8 +132,10 @@ const updateZIndexOnScroll = () => {
   // Adjust intro-box z-index based on scroll position
   if (scrollPosition === 0) {
     introZIndex.value = 8; // At the top, keep intro-box prominent
-  } else {
+  } else if (scrollPosition > 100 && scrollPosition < 800) {
     introZIndex.value = 5; // Lower the z-index when scrolling down
+  } else {
+    introZIndex.value = 0; // Lower the z-index when scrolling down
   }
 };
 
@@ -208,7 +210,7 @@ const updateActiveSection = () => {
     'projectSection',
     'skillsSection',
   ];
-  const scrollPosition = window.scrollY + 110; // Adjust for 100px offset + buffer
+  const scrollPosition = window.scrollY + 150; // Adjust for 100px offset + buffer
   for (const section of sections) {
     const element = document.getElementById(section);
     if (window.scrollY <= 120) {
@@ -287,7 +289,7 @@ const openResume = () => {
 
 .q-btn.active {
   font-weight: bold; /* Emphasize active button */
-  border-bottom: solid rgb(36, 254, 221) 5px;
+  border-bottom: solid rgb(188, 254, 244) 5px;
 }
 
 .q-toolbar__title {

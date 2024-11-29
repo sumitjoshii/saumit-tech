@@ -1,3 +1,16 @@
+<template>
+  <div class="icon-matrix">
+    <div class="icon-grid">
+      <font-awesome-icon
+        v-for="(icon, index) in repeatedIcons"
+        :key="index"
+        :icon="icon"
+        class="icon"
+      />
+    </div>
+  </div>
+</template>
+
 <script setup>
 import {
   faPython,
@@ -17,19 +30,6 @@ const repeatedIcons = Array.from(
   (_, i) => icons[i % icons.length]
 );
 </script>
-
-<template>
-  <div class="icon-matrix">
-    <div class="icon-grid">
-      <font-awesome-icon
-        v-for="(icon, index) in repeatedIcons"
-        :key="index"
-        :icon="icon"
-        class="icon"
-      />
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .icon-matrix {

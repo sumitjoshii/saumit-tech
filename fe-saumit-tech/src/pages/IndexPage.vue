@@ -171,7 +171,282 @@
       </div>
 
       <div class="project inner-div" id="projectSection">
-        <div class="all-projects"></div>
+        <div class="all-projects">
+          <div class="tourney project-block">
+            <div class="info">
+              <div class="project-name">Tourney! - A Tournament App.</div>
+              <div class="project-desc">
+                <div>
+                  - An app to help schedule and track the matched in a
+                  tournament.
+                </div>
+                <div>
+                  - Multiple match formats supported like: Round Robin, Double
+                  Round Robin, etc.
+                </div>
+              </div>
+              <div class="tech-used">
+                <div>Tech Used</div>
+                <div class="logo-sm">
+                  <div class="python-sm">
+                    <img
+                      width="40"
+                      height="40"
+                      src="https://img.icons8.com/color/240/python.png"
+                      alt="python"
+                    />
+                  </div>
+                  <div class="django-sm">
+                    <img
+                      width="60"
+                      height="60"
+                      src="https://img.icons8.com/ios/500/django.png"
+                      alt="django"
+                      style="filter: invert(100%) brightness(2)"
+                    />
+                  </div>
+                  <div class="vue-sm">
+                    <img
+                      width="40"
+                      height="40"
+                      src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
+                      alt="vue"
+                    />
+                  </div>
+                  <div class="sql-sm">
+                    <img
+                      width="60"
+                      height="60"
+                      src="https://img.icons8.com/ios-filled/100/sql.png"
+                      alt="sql"
+                      style="filter: invert(100%) brightness(2)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <div>
+                <img
+                  width="90"
+                  height="90"
+                  src="../assets/images/tournament.png"
+                  alt="aws"
+                />
+              </div>
+              <div class="links">
+                <q-btn
+                  flat
+                  label="Github"
+                  class="button-link"
+                  @click="openResume"
+                >
+                  <font-awesome-icon
+                    icon="fa-solid fa-up-right-from-square"
+                    class="q-ml-xs"
+                  />
+                </q-btn>
+                <q-btn
+                  flat
+                  label="Site"
+                  class="button-link"
+                  @click="openResume"
+                >
+                  <font-awesome-icon
+                    icon="fa-solid fa-up-right-from-square"
+                    class="q-ml-xs"
+                  />
+                </q-btn>
+              </div>
+            </div>
+          </div>
+          <div class="todo project-block">
+            <div class="image">
+              <div>
+                <img
+                  width="90"
+                  height="90"
+                  src="../assets/images/todo.png"
+                  alt="aws"
+                  style="filter: invert(100%) brightness(2)"
+                />
+              </div>
+              <div class="links">
+                <q-btn
+                  flat
+                  label="Github"
+                  class="button-link"
+                  @click="openResume"
+                >
+                  <font-awesome-icon
+                    icon="fa-solid fa-up-right-from-square"
+                    class="q-ml-xs"
+                  />
+                </q-btn>
+                <q-btn
+                  flat
+                  label="Site"
+                  class="button-link"
+                  @click="openResume"
+                >
+                  <font-awesome-icon
+                    icon="fa-solid fa-up-right-from-square"
+                    class="q-ml-xs"
+                  />
+                </q-btn>
+              </div>
+            </div>
+            <div class="info">
+              <div class="project-name">Tourney! - A Tournament App.</div>
+              <div class="project-desc">
+                <div>
+                  - An app to help schedule and track the matched in a
+                  tournament.
+                </div>
+                <div>
+                  - Multiple match formats supported like: Round Robin, Double
+                  Round Robin, etc.
+                </div>
+              </div>
+              <div class="tech-used">
+                <div>Tech Used</div>
+                <div class="logo-sm">
+                  <div class="python-sm">
+                    <img
+                      width="40"
+                      height="40"
+                      src="https://img.icons8.com/color/240/python.png"
+                      alt="python"
+                    />
+                  </div>
+                  <div class="django-sm">
+                    <img
+                      width="60"
+                      height="60"
+                      src="https://img.icons8.com/ios/500/django.png"
+                      alt="django"
+                      style="filter: invert(100%) brightness(2)"
+                    />
+                  </div>
+                  <div class="vue-sm">
+                    <img
+                      width="40"
+                      height="40"
+                      src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
+                      alt="vue"
+                    />
+                  </div>
+                  <div class="postgres-sm">
+                    <img
+                      width="60"
+                      height="60"
+                      src="https://img.icons8.com/ios-filled/250/postgreesql.png"
+                      alt="postgreesql"
+                      style="filter: invert(100%) brightness(2)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stock-prediction project-block">
+            <div class="info">
+              <div class="project-name">Tourney! - A Tournament App.</div>
+              <div class="project-desc">
+                <div>
+                  - An app to help schedule and track the matched in a
+                  tournament.
+                </div>
+                <div>
+                  - Multiple match formats supported like: Round Robin, Double
+                  Round Robin, etc.
+                </div>
+              </div>
+              <div class="tech-used">
+                <div>Tech Used</div>
+                <div class="logo-sm">
+                  <div class="python-sm">
+                    <img
+                      width="40"
+                      height="40"
+                      src="https://img.icons8.com/color/240/python.png"
+                      alt="python"
+                    />
+                  </div>
+                  <div class="django-sm">
+                    <img
+                      width="60"
+                      height="60"
+                      src="https://img.icons8.com/ios/500/django.png"
+                      alt="django"
+                      style="filter: invert(100%) brightness(2)"
+                    />
+                  </div>
+                  <div class="numpy-sm">
+                    <img
+                      width="50"
+                      height="50"
+                      src="https://img.icons8.com/color/240/numpy.png"
+                      alt="numpy"
+                    />
+                  </div>
+                  <div class="sql-sm">
+                    <img
+                      width="60"
+                      height="60"
+                      src="https://img.icons8.com/ios-filled/100/sql.png"
+                      alt="sql"
+                      style="filter: invert(100%) brightness(2)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <div>
+                <img
+                  width="90"
+                  height="90"
+                  src="https://img.icons8.com/ios-filled/100/stocks.png"
+                  alt="stocks"
+                  style="filter: invert(100%) brightness(2)"
+                />
+              </div>
+              <div class="links">
+                <q-btn
+                  flat
+                  label="Github"
+                  class="button-link"
+                  @click="openResume"
+                >
+                  <font-awesome-icon
+                    icon="fa-solid fa-up-right-from-square"
+                    class="q-ml-xs"
+                  />
+                </q-btn>
+                <q-btn
+                  flat
+                  label="Site"
+                  class="button-link"
+                  @click="openResume"
+                >
+                  <font-awesome-icon
+                    icon="fa-solid fa-up-right-from-square"
+                    class="q-ml-xs"
+                  />
+                </q-btn>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thank-you">
+        <div class="message">Thank You for scrolling!</div>
+        <div class="heart-section">
+          <button class="heart-button" @click="increaseCount">❤️</button>
+          <div class="counter">{{ count }}</div>
+        </div>
       </div>
     </div>
   </q-page>
@@ -179,6 +454,15 @@
 
 <script setup>
 import { onMounted } from 'vue';
+import { ref } from 'vue';
+
+// Counter for the heart clicks
+const count = ref(0);
+
+// Function to increase the counter
+const increaseCount = () => {
+  count.value++;
+};
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -206,6 +490,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 .scroll-div {
   padding-top: 800px;
   position: relative;
@@ -225,7 +510,7 @@ onMounted(() => {
 }
 
 .education {
-  background-color: aliceblue;
+  background-color: rgb(247, 247, 235);
 }
 
 .timeline {
@@ -404,6 +689,119 @@ onMounted(() => {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+.image {
+  margin: auto 0 auto 0;
+}
+
+.project {
+  height: fit-content;
+  margin: auto;
+  background-color: rgb(11, 3, 30);
+  color: aliceblue;
+}
+
+.all-projects {
+  margin: auto;
+  width: 70%;
+}
+
+.project-block {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 40px;
+  box-shadow: 10px 10px 5px rgba(0, 68, 91, 0.883);
+}
+
+.project-name {
+  font-size: 26px;
+}
+.project-desc {
+  font-size: 20px;
+  text-align: left;
+}
+
+.info {
+  font-family: 'Courier New', Courier, monospace;
+  width: 500px;
+}
+
+.tech-used {
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  align-items: center;
+}
+
+.logo-sm {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button-link:hover {
+  color: rgb(0, 145, 255);
+}
+
+.thank-you {
+  background-color: #d2042dc4;
+  height: 150px;
+  width: 60%;
+  margin: 50px auto 50px auto;
+  border-radius: 20px;
+  align-items: center;
+
+  backdrop-filter: blur(10px);
+}
+
+.message {
+  color: rgb(248, 235, 219);
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-family: 'Tiny5', sans-serif;
+}
+
+.heart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.heart-button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  animation: pulse 0.3s;
+}
+
+.heart-button:active {
+  transform: scale(1.1);
+}
+
+.counter {
+  font-size: 25px;
+  color: rgb(255, 255, 240);
+  font-weight: bold;
+}
+
+/* Heart pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 </style>
