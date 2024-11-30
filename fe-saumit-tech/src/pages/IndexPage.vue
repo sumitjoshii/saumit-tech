@@ -52,6 +52,7 @@
                 class="company-image"
                 src="../assets/images/accenture.png"
               ></q-img>
+              <div class="job-title">Associate Software Engineer</div>
               <div class="jd">
                 <div>
                   - Developed automation script in Selenium to reduce testing
@@ -65,6 +66,7 @@
                 class="company-image"
                 src="../assets/images/accenture.png"
               ></q-img>
+              <div class="job-title">Software Engineer</div>
               <div class="jd">
                 <div>
                   - Built frontend components for Report Centre Module using
@@ -80,6 +82,7 @@
               </div>
             </div>
           </div>
+          <div class="separator"></div>
           <div class="header">Open Source</div>
           <div class="open-company">
             <q-img
@@ -103,14 +106,6 @@
       </div>
       <div class="skills inner-div" id="skillsSection">
         <div class="tech-skills">
-          <div class="logo python">
-            <img
-              width="240"
-              height="240"
-              src="https://img.icons8.com/color/240/python.png"
-              alt="python"
-            />
-          </div>
           <div class="logo django">
             <img
               width="240"
@@ -119,6 +114,7 @@
               alt="django"
               style="filter: invert(100%) brightness(2)"
             />
+            <q-tooltip> Django Web Framework </q-tooltip>
           </div>
           <div class="logo vue">
             <img
@@ -127,6 +123,7 @@
               src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
               alt="vue"
             />
+            <q-tooltip> VueJs Framework </q-tooltip>
           </div>
           <div class="logo js">
             <img
@@ -135,6 +132,7 @@
               src="https://img.icons8.com/color/240/javascript--v1.png"
               alt="javascript"
             />
+            <q-tooltip> Javascript Programming Language </q-tooltip>
           </div>
           <!-- <div class="logo sql" style="left: 75%; top: 28%">
             <img
@@ -157,6 +155,7 @@
                 padding: 4px;
               "
             />
+            <q-tooltip> AWS: Cloud Compute</q-tooltip>
           </div>
           <div class="logo git">
             <img
@@ -166,13 +165,31 @@
               alt="git"
               style="filter: invert(100%) brightness(2)"
             />
+            <q-tooltip> Git: Version Control</q-tooltip>
+          </div>
+          <div class="logo postman">
+            <img
+              width="90"
+              height="90"
+              src="../assets/images/postman.png"
+              alt="postman"
+            />
+            <q-tooltip> Postman Tool </q-tooltip>
+          </div>
+          <div class="logo python">
+            <img
+              width="240"
+              height="240"
+              src="https://img.icons8.com/color/240/python.png"
+              alt="python"
+            />
+            <q-tooltip> Python Programming Language </q-tooltip>
           </div>
         </div>
       </div>
-
       <div class="project inner-div" id="projectSection">
         <div class="all-projects">
-          <div class="tourney project-block">
+          <div class="tourney project-block" data-project="tourney">
             <div class="info">
               <div class="project-name">Tourney! - A Tournament App.</div>
               <div class="project-desc">
@@ -186,7 +203,7 @@
                 </div>
               </div>
               <div class="tech-used">
-                <div>Tech Used</div>
+                <div>Tech Used:</div>
                 <div class="logo-sm">
                   <div class="python-sm">
                     <img
@@ -239,7 +256,7 @@
                   flat
                   label="Github"
                   class="button-link"
-                  @click="openResume"
+                  @click="openLink('github', $event)"
                 >
                   <font-awesome-icon
                     icon="fa-solid fa-up-right-from-square"
@@ -250,7 +267,7 @@
                   flat
                   label="Site"
                   class="button-link"
-                  @click="openResume"
+                  @click="openLink('site', $event)"
                 >
                   <font-awesome-icon
                     icon="fa-solid fa-up-right-from-square"
@@ -260,7 +277,7 @@
               </div>
             </div>
           </div>
-          <div class="todo project-block">
+          <div class="todo project-block" data-project="todo">
             <div class="image">
               <div>
                 <img
@@ -276,7 +293,7 @@
                   flat
                   label="Github"
                   class="button-link"
-                  @click="openResume"
+                  @click="openLink('github', $event)"
                 >
                   <font-awesome-icon
                     icon="fa-solid fa-up-right-from-square"
@@ -287,7 +304,7 @@
                   flat
                   label="Site"
                   class="button-link"
-                  @click="openResume"
+                  @click="openLink('site', $event)"
                 >
                   <font-awesome-icon
                     icon="fa-solid fa-up-right-from-square"
@@ -297,19 +314,15 @@
               </div>
             </div>
             <div class="info">
-              <div class="project-name">Tourney! - A Tournament App.</div>
+              <div class="project-name">ToDo App.</div>
               <div class="project-desc">
                 <div>
-                  - An app to help schedule and track the matched in a
-                  tournament.
+                  - Creating and tracking user tasks through a ToDo list.
                 </div>
-                <div>
-                  - Multiple match formats supported like: Round Robin, Double
-                  Round Robin, etc.
-                </div>
+                <div>- Built on Django/Vue/Quasar Stack</div>
               </div>
               <div class="tech-used">
-                <div>Tech Used</div>
+                <div>Tech Used:</div>
                 <div class="logo-sm">
                   <div class="python-sm">
                     <img
@@ -338,8 +351,8 @@
                   </div>
                   <div class="postgres-sm">
                     <img
-                      width="60"
-                      height="60"
+                      width="50"
+                      height="50"
                       src="https://img.icons8.com/ios-filled/250/postgreesql.png"
                       alt="postgreesql"
                       style="filter: invert(100%) brightness(2)"
@@ -349,21 +362,21 @@
               </div>
             </div>
           </div>
-          <div class="stock-prediction project-block">
+          <div class="stock-prediction project-block" data-project="stocks">
             <div class="info">
-              <div class="project-name">Tourney! - A Tournament App.</div>
+              <div class="project-name">Stock Price Prediction.</div>
               <div class="project-desc">
                 <div>
-                  - An app to help schedule and track the matched in a
-                  tournament.
+                  - A Django dashboard assisting investors track, manage and
+                  suggest future investments.
                 </div>
                 <div>
-                  - Multiple match formats supported like: Round Robin, Double
-                  Round Robin, etc.
+                  - Using ARIMA model on historic data and analyzing market
+                  sentiments using TwitterAPI.
                 </div>
               </div>
               <div class="tech-used">
-                <div>Tech Used</div>
+                <div>Tech Used:</div>
                 <div class="logo-sm">
                   <div class="python-sm">
                     <img
@@ -417,7 +430,7 @@
                   flat
                   label="Github"
                   class="button-link"
-                  @click="openResume"
+                  @click="openLink('github', $event)"
                 >
                   <font-awesome-icon
                     icon="fa-solid fa-up-right-from-square"
@@ -428,7 +441,7 @@
                   flat
                   label="Site"
                   class="button-link"
-                  @click="openResume"
+                  @click="openLink('site', $event)"
                 >
                   <font-awesome-icon
                     icon="fa-solid fa-up-right-from-square"
@@ -452,7 +465,7 @@
   </q-page>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue';
 import { ref } from 'vue';
 
@@ -486,7 +499,95 @@ onMounted(() => {
   } else {
     console.error('Skills section not found!');
   }
+
+  //count++
+  count.value++;
 });
+
+//Card overlap TBD
+// onMounted(() => {
+//   const innerDivs = document.querySelectorAll(
+//     '.inner-div'
+//   ) as NodeListOf<HTMLElement>;
+
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         const target = entry.target as HTMLElement; // Cast the target to HTMLElement
+//         const index = Array.from(innerDivs).indexOf(target);
+
+//         if (entry.isIntersecting) {
+//           // Overlap amount based on visibility
+//           const overlapAmount = Math.min(
+//             500, // Max overlap in px
+//             Math.floor(entry.intersectionRatio * 100) // Scale overlap by visibility
+//           );
+
+//           console.log('overlap amount: ', overlapAmount);
+//           console.log(
+//             'Ratio: ',
+//             Math.floor(entry.intersectionRatio * 600),
+//             '@',
+//             entry.intersectionRatio
+//           );
+
+//           target.style.transform = `translateY(-${overlapAmount}px)`; // Move element up
+//           target.style.zIndex = `${100 - index}`; // Bring overlapping div to the top
+//         } else {
+//           target.style.transform = 'translateY(0px)'; // Reset transform when not visible
+//           target.style.zIndex = '1'; // Reset zIndex when out of view
+//         }
+//       });
+//     },
+//     {
+//       root: null,
+//       threshold: 0.9, // Start the effect when 50% of the element is visible (middle of the viewport)
+//     }
+//   );
+
+//   innerDivs.forEach((div) => observer.observe(div));
+// });
+
+// Define the type for project links
+interface ProjectLinks {
+  [key: string]: {
+    github: string;
+    site: string;
+  };
+}
+
+// Links for each project
+const projectLinks: ProjectLinks = {
+  tourney: {
+    github: 'https://github.com/sumitjoshii/tourney',
+    site: 'tourney.saumit.tech',
+  },
+  todo: {
+    github: 'https://github.com/sumitjoshii/fs-todo',
+    site: 'todo.saumit.tech',
+  },
+  stocks: {
+    github: 'https://github.com/sumitjoshii?tab=repositories',
+    site: 'stocks.saumit.tech',
+  },
+};
+
+// Function to open the link
+const openLink = (type: 'github' | 'site', event: Event) => {
+  const projectBlock = (event.target as HTMLElement).closest(
+    '.project-block'
+  ) as HTMLElement;
+
+  if (projectBlock) {
+    const project = projectBlock.dataset.project as keyof typeof projectLinks;
+    if (project && projectLinks[project] && projectLinks[project][type]) {
+      const url = projectLinks[project][type];
+      window.open(url, '_blank');
+    } else {
+      console.error(`Link not found for project: ${project}, type: ${type}`);
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -502,6 +603,38 @@ onMounted(() => {
   text-align: center;
   padding-bottom: 200px;
 }
+
+/* ======CARD====== */
+
+.scroll-div {
+  padding-top: 800px;
+  position: relative;
+  z-index: 6;
+  background-color: transparent;
+  height: fit-content;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.inner-div {
+  height: fit-content;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 30px; /* For spacing between cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card-like effect */
+  transition: transform 0.3s ease; /* Smooth transition for overlap */
+  position: relative;
+  z-index: 1; /* Maintain stacking order */
+  background-color: white; /* Card background */
+}
+
+.inner-div:not(:first-child) {
+  transform: translateY(0); /* No overlap initially */
+}
+
+/* ======Card====== */
 
 .inner-div {
   height: fit-content;
@@ -534,7 +667,7 @@ onMounted(() => {
 
 .line {
   width: 412px;
-  height: 5px;
+  height: 3px;
   background-color: black;
   margin-left: 10px;
   margin-right: 10px;
@@ -578,10 +711,18 @@ onMounted(() => {
   min-width: 1000px;
 }
 
+.separator {
+  width: 60%;
+  margin: 50px auto -10px auto;
+  height: 1px;
+  border-radius: 20px;
+  background-color: rgb(1, 4, 86);
+}
+
 .open-company {
   margin: auto;
   width: fit-content;
-  padding: 30px;
+
   padding-bottom: 80px;
 }
 
@@ -600,11 +741,18 @@ onMounted(() => {
   height: 100px;
 }
 
+.job-title {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 22px;
+  margin: -5px 0 15px 0;
+}
+
 .jd {
   width: 450px;
   font-family: 'Courier New', Courier, monospace;
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .skills {
@@ -659,8 +807,13 @@ onMounted(() => {
   top: 28%;
 }
 
+.logo.postman.animate {
+  left: 26%;
+  top: 40%;
+}
+
 .logo:hover {
-  background-color: aqua;
+  transform: scale(1.08);
 }
 
 /* Floating animation (up and down) */
@@ -720,9 +873,10 @@ onMounted(() => {
 
 .project-name {
   font-size: 26px;
+  margin: 2px 0 15px 0;
 }
 .project-desc {
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -736,6 +890,7 @@ onMounted(() => {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   align-items: center;
+  padding: 20px;
 }
 
 .logo-sm {
@@ -805,3 +960,29 @@ onMounted(() => {
   }
 }
 </style>
+
+<!-- <div class="scroll-div">
+      <div class="inner-div" id="eduSection">
+        <div class="education">
+        </div>
+      </div>
+      <div class="inner-div" id="expSection">
+        <div class="experience">
+          <div class="company">
+            <div class="job-information">
+              <q-img
+                class="company-image"
+                src="../assets/images/accenture.png"
+              ></q-img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills inner-div" id="skillsSection">
+        <div class="tech-skills">
+        </div>
+      </div>
+      <div class="project inner-div" id="projectSection">
+        <div class="all-projects">
+        </div>
+      </div> -->

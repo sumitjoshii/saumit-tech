@@ -132,7 +132,7 @@ const updateZIndexOnScroll = () => {
   // Adjust intro-box z-index based on scroll position
   if (scrollPosition === 0) {
     introZIndex.value = 8; // At the top, keep intro-box prominent
-  } else if (scrollPosition > 100 && scrollPosition < 800) {
+  } else if (scrollPosition > 10 && scrollPosition < 600) {
     introZIndex.value = 5; // Lower the z-index when scrolling down
   } else {
     introZIndex.value = 0; // Lower the z-index when scrolling down
@@ -193,7 +193,9 @@ onMounted(() => {
 
 const activeSection = ref('top'); // Default active section
 const scrollToTop = () => {
-  activeSection.value = 'top';
+  setTimeout(() => {
+    activeSection.value = 'top';
+  }, 800);
 
   window.scrollTo({
     top: 0,
