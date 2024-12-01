@@ -10,20 +10,20 @@
         <q-toolbar-title>Sumit Joshi</q-toolbar-title>
       </q-btn>
       <!-- Header Button -->
-      <div style="display: flex; align-items: center; margin-left: auto">
+      <div class="header-buttons">
         <q-btn
           flat
           label="Education"
           :class="{ active: activeSection === 'eduSection' }"
           @click="scrollTo('eduSection')"
-          class="q-ml-md"
+          class="section-button"
         />
         <q-btn
           flat
           label="Experience"
           :class="{ active: activeSection === 'expSection' }"
           @click="scrollTo('expSection')"
-          class="q-ml-md"
+          class="section-button"
         />
 
         <q-btn
@@ -31,27 +31,33 @@
           label="Skills"
           :class="{ active: activeSection === 'skillsSection' }"
           @click="scrollTo('skillsSection')"
-          class="q-ml-md"
+          class="section-button"
         />
         <q-btn
           flat
           label="Projects"
           :class="{ active: activeSection === 'projectSection' }"
           @click="scrollTo('projectSection')"
-          class="q-ml-md"
+          class="section-button"
         />
-        <q-btn flat label="Resume" class="q-ml-md" @click="openResume">
+        <q-btn
+          flat
+          label="Resume"
+          @click="openResume"
+          class="section-button"
+          style="align-items: center"
+        >
           <font-awesome-icon
+            class="q-pa-xs"
             icon="fa-solid fa-up-right-from-square"
-            class="q-ml-xs"
           />
         </q-btn>
       </div>
     </q-toolbar>
 
     <div class="intro-box" :style="{ zIndex: introZIndex }">
-      <h2>Sumit Joshi, <span class="dynamic-text"></span></h2>
-      <p>
+      <h2 class="name">Sumit Joshi, <span class="dynamic-text"></span></h2>
+      <p class="virtues">
         Passionate about building efficient solutions, leveraging my skills in
         development, problem solving, and innovation. I thrive on challenges and
         love creating impactful user experiences.
@@ -134,7 +140,7 @@ const updateZIndexOnScroll = () => {
     introZIndex.value = 8; // At the top, keep intro-box prominent
   } else if (scrollPosition > 10 && scrollPosition < 600) {
     introZIndex.value = 5; // Lower the z-index when scrolling down
-  } else {
+  } else if (scrollPosition > 600) {
     introZIndex.value = 0; // Lower the z-index when scrolling down
   }
 };
@@ -193,10 +199,6 @@ onMounted(() => {
 
 const activeSection = ref('top'); // Default active section
 const scrollToTop = () => {
-  setTimeout(() => {
-    activeSection.value = 'top';
-  }, 800);
-
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
@@ -297,6 +299,12 @@ const openResume = () => {
 .q-toolbar__title {
   color: aliceblue;
   padding: 10px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .intro-box {
@@ -434,5 +442,113 @@ const openResume = () => {
 
 .icon.x:hover {
   color: #1da1f2; /* Twitter/X blue */
+}
+
+/* Mobile UI */
+@media (max-width: 980px) {
+  .custom-toolbar {
+    width: 100%; /* Make toolbar narrower */
+    margin-top: 5px;
+    padding: 8px; /* Adjust padding */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .intro-box {
+    top: 20%; /* Adjust positioning for smaller screens */
+    width: 85%; /* Increase width to fit mobile screens */
+    padding: 30px; /* Reduce padding */
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  .scroll-arrow .arrow {
+    font-size: 20px; /* Adjust arrow size */
+  }
+
+  .socials {
+    gap: 15px; /* Reduce spacing between icons */
+  }
+
+  .socials .icon {
+    font-size: 25px; /* Adjust icon size */
+  }
+
+  .fixbg {
+    background-size: cover; /* Ensure background scales properly */
+  }
+}
+
+@media (max-width: 800px) {
+  .section-button {
+    font-size: 12px;
+    padding: 0;
+    margin-left: 25px;
+  }
+  .q-toolbar__title {
+    font-size: 15px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 570px) {
+  .section-button {
+    font-size: 12px;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 490px) {
+  .q-toolbar__title {
+    font-size: 15px;
+    padding: 2px;
+  }
+
+  .q-btn.q-toolbar-title-btn {
+    padding: 0px; /* Remove padding */
+  }
+  .section-button {
+    font-size: 9px;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .header-buttons {
+    margin-left: auto;
+  }
+  .intro-box {
+    width: 90%;
+  }
+  .name {
+    font-size: 25px;
+    position: absolute;
+    font-weight: bold;
+  }
+
+  .virtues {
+    padding-top: 90px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 390px) {
+  .q-toolbar__title {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  .name {
+    font-size: 25px;
+    line-height: normal;
+    position: absolute;
+  }
+
+  .virtues {
+    font-size: 18px;
+    padding-top: 90px;
+  }
 }
 </style>

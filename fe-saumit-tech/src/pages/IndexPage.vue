@@ -3,9 +3,9 @@
     <div class="scroll-div">
       <div class="inner-div" id="eduSection">
         <div class="education">
-          <div class="timeline">
+          <div class="timeline-edu">
             <q-img class="edu-image" src="../assets/images/diploma.png"></q-img>
-            <div class="line"></div>
+            <div class="line-edu"></div>
             <q-img class="edu-image" src="../assets/images/degree.png"></q-img>
           </div>
           <div class="institutes">
@@ -29,59 +29,62 @@
       <div class="inner-div" id="expSection">
         <div class="experience">
           <div class="header">Professional WorkEx.</div>
-          <div class="timeline">
-            <div class="company-year">
-              <div class="year-1">2021</div>
-            </div>
+          <div class="mobile-ui">
+            <div class="timeline-job">
+              <div class="company-year">
+                <div class="year-1">2021</div>
+              </div>
 
-            <div class="line"></div>
-            <div class="company-year">
-              <div class="year-2">2023</div>
-            </div>
-            <!-- <div class="line"></div>
+              <div class="line-job"></div>
+              <div class="company-year">
+                <div class="year-2">2023</div>
+              </div>
+              <!-- <div class="line"></div>
             <div class="company-year">
               <div class="present">2025</div>
             </div> -->
-            <div class="dash-line"></div>
-            <div class="dash-line"></div>
-            <div class="dash-line"></div>
-          </div>
-          <div class="company">
-            <div class="job-information">
-              <q-img
-                class="company-image"
-                src="../assets/images/accenture.png"
-              ></q-img>
-              <div class="job-title">Associate Software Engineer</div>
-              <div class="jd">
-                <div>
-                  - Developed automation script in Selenium to reduce testing
-                  efforts and increase coverage by 30%.
-                </div>
-                <div>- Led internal testing team.</div>
-              </div>
+              <div class="dash-line"></div>
+              <div class="dash-line"></div>
+              <div class="dash-line"></div>
             </div>
-            <div class="job-information">
-              <q-img
-                class="company-image"
-                src="../assets/images/accenture.png"
-              ></q-img>
-              <div class="job-title">Software Engineer</div>
-              <div class="jd">
-                <div>
-                  - Built frontend components for Report Centre Module using
-                  Quasar framework
-                </div>
-                <div>
-                  - Optimized and tested CRUD APIs in Django Rest Framework.
-                </div>
-                <div>
-                  - Implemented Role-Based Access Control for multiple
-                  User-Types on customer portal.
+            <div class="company">
+              <div class="job-information">
+                <q-img
+                  class="company-image"
+                  src="../assets/images/accenture.png"
+                ></q-img>
+                <div class="job-title">Associate Software Engineer</div>
+                <div class="jd">
+                  <div>
+                    - Developed automation script in Selenium to reduce testing
+                    efforts and increase coverage by 30%.
+                  </div>
+                  <div>- Led internal testing team.</div>
                 </div>
               </div>
+              <div class="job-information">
+                <q-img
+                  class="company-image"
+                  src="../assets/images/accenture.png"
+                ></q-img>
+                <div class="job-title">Software Engineer</div>
+                <div class="jd">
+                  <div>
+                    - Built frontend components for Report Centre Module using
+                    Quasar framework
+                  </div>
+                  <div>
+                    - Optimized and tested CRUD APIs in Django Rest Framework.
+                  </div>
+                  <div>
+                    - Implemented Role-Based Access Control for multiple
+                    User-Types on customer portal.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="separator"></div>
           <div class="header">Open Source</div>
           <div class="open-company">
@@ -91,7 +94,7 @@
             >
             </q-img>
             <div class="year">2024-present.</div>
-            <div class="jd">
+            <div class="jd jd-open">
               <div>
                 - Implemented User Impersonation feature to help Admin triage
                 end-user issues swiftly.
@@ -108,6 +111,7 @@
         <div class="tech-skills">
           <div class="logo django">
             <img
+              class="mobile-ui-skill"
               width="240"
               height="240"
               src="https://img.icons8.com/ios/500/django.png"
@@ -118,6 +122,7 @@
           </div>
           <div class="logo vue">
             <img
+              class="mobile-ui-skill"
               width="100"
               height="100"
               src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
@@ -127,6 +132,7 @@
           </div>
           <div class="logo js">
             <img
+              class="mobile-ui-skill"
               width="140"
               height="140"
               src="https://img.icons8.com/color/240/javascript--v1.png"
@@ -145,6 +151,7 @@
           </div> -->
           <div class="logo aws">
             <img
+              class="mobile-ui-skill-aws"
               width="90"
               height="90"
               src="https://img.icons8.com/color/240/amazon-web-services.png"
@@ -159,6 +166,7 @@
           </div>
           <div class="logo git">
             <img
+              class="mobile-ui-skill"
               width="120"
               height="120"
               src="https://img.icons8.com/ios-filled/250/git.png"
@@ -169,6 +177,7 @@
           </div>
           <div class="logo postman">
             <img
+              class="mobile-ui-skill"
               width="90"
               height="90"
               src="../assets/images/postman.png"
@@ -178,6 +187,7 @@
           </div>
           <div class="logo python">
             <img
+              class="mobile-ui-skill"
               width="240"
               height="240"
               src="https://img.icons8.com/color/240/python.png"
@@ -207,6 +217,7 @@
                 <div class="logo-sm">
                   <div class="python-sm">
                     <img
+                      class="logo-sm-mob"
                       width="40"
                       height="40"
                       src="https://img.icons8.com/color/240/python.png"
@@ -215,6 +226,7 @@
                   </div>
                   <div class="django-sm">
                     <img
+                      class="logo-sm-mob"
                       width="60"
                       height="60"
                       src="https://img.icons8.com/ios/500/django.png"
@@ -224,6 +236,7 @@
                   </div>
                   <div class="vue-sm">
                     <img
+                      class="logo-sm-mob"
                       width="40"
                       height="40"
                       src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
@@ -232,6 +245,7 @@
                   </div>
                   <div class="sql-sm">
                     <img
+                      class="logo-sm-mob"
                       width="60"
                       height="60"
                       src="https://img.icons8.com/ios-filled/100/sql.png"
@@ -245,6 +259,7 @@
             <div class="image">
               <div>
                 <img
+                  class="image-project"
                   width="90"
                   height="90"
                   src="../assets/images/tournament.png"
@@ -281,6 +296,7 @@
             <div class="image">
               <div>
                 <img
+                  class="image-project"
                   width="90"
                   height="90"
                   src="../assets/images/todo.png"
@@ -326,6 +342,7 @@
                 <div class="logo-sm">
                   <div class="python-sm">
                     <img
+                      class="logo-sm-mob"
                       width="40"
                       height="40"
                       src="https://img.icons8.com/color/240/python.png"
@@ -334,6 +351,7 @@
                   </div>
                   <div class="django-sm">
                     <img
+                      class="logo-sm-mob"
                       width="60"
                       height="60"
                       src="https://img.icons8.com/ios/500/django.png"
@@ -343,6 +361,7 @@
                   </div>
                   <div class="vue-sm">
                     <img
+                      class="logo-sm-mob"
                       width="40"
                       height="40"
                       src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
@@ -351,6 +370,7 @@
                   </div>
                   <div class="postgres-sm">
                     <img
+                      class="logo-sm-mob"
                       width="50"
                       height="50"
                       src="https://img.icons8.com/ios-filled/250/postgreesql.png"
@@ -380,6 +400,7 @@
                 <div class="logo-sm">
                   <div class="python-sm">
                     <img
+                      class="logo-sm-mob"
                       width="40"
                       height="40"
                       src="https://img.icons8.com/color/240/python.png"
@@ -388,6 +409,7 @@
                   </div>
                   <div class="django-sm">
                     <img
+                      class="logo-sm-mob"
                       width="60"
                       height="60"
                       src="https://img.icons8.com/ios/500/django.png"
@@ -397,6 +419,7 @@
                   </div>
                   <div class="numpy-sm">
                     <img
+                      class="logo-sm-mob"
                       width="50"
                       height="50"
                       src="https://img.icons8.com/color/240/numpy.png"
@@ -405,6 +428,7 @@
                   </div>
                   <div class="sql-sm">
                     <img
+                      class="logo-sm-mob"
                       width="60"
                       height="60"
                       src="https://img.icons8.com/ios-filled/100/sql.png"
@@ -418,6 +442,7 @@
             <div class="image">
               <div>
                 <img
+                  class="image-project"
                   width="90"
                   height="90"
                   src="https://img.icons8.com/ios-filled/100/stocks.png"
@@ -560,7 +585,7 @@ interface ProjectLinks {
 const projectLinks: ProjectLinks = {
   tourney: {
     github: 'https://github.com/sumitjoshii/tourney',
-    site: 'tourney.saumit.tech',
+    site: 'https://tourney.saumit.tech',
   },
   todo: {
     github: 'https://github.com/sumitjoshii/fs-todo',
@@ -646,14 +671,15 @@ const openLink = (type: 'github' | 'site', event: Event) => {
   background-color: rgb(247, 247, 235);
 }
 
-.timeline {
+.timeline-edu,
+.timeline-job {
   padding: 20px;
   padding-top: 40px;
   display: flex;
   justify-content: center; /* Ensure even spacing between items */
   align-items: center; /* Vertically center the items */
   width: 800px; /* Make it take the full width of its container */
-  min-width: 800px;
+
   margin: auto;
   box-sizing: border-box; /* Include padding and border in the width calculation */
   font-family: 'Courier New', Courier, monospace;
@@ -665,7 +691,8 @@ const openLink = (type: 'github' | 'site', event: Event) => {
   height: 60px;
 }
 
-.line {
+.line-edu,
+.line-job {
   width: 412px;
   height: 3px;
   background-color: black;
@@ -708,7 +735,6 @@ const openLink = (type: 'github' | 'site', event: Event) => {
   justify-content: space-around;
   margin: auto;
   width: 1000px; /* Make it take the full width of its container */
-  min-width: 1000px;
 }
 
 .separator {
@@ -959,30 +985,293 @@ const openLink = (type: 'github' | 'site', event: Event) => {
     transform: scale(1);
   }
 }
-</style>
 
-<!-- <div class="scroll-div">
-      <div class="inner-div" id="eduSection">
-        <div class="education">
-        </div>
-      </div>
-      <div class="inner-div" id="expSection">
-        <div class="experience">
-          <div class="company">
-            <div class="job-information">
-              <q-img
-                class="company-image"
-                src="../assets/images/accenture.png"
-              ></q-img>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="skills inner-div" id="skillsSection">
-        <div class="tech-skills">
-        </div>
-      </div>
-      <div class="project inner-div" id="projectSection">
-        <div class="all-projects">
-        </div>
-      </div> -->
+/* Mobile UI */
+@media (max-width: 1111px) {
+  .institutes {
+    width: auto;
+    font-size: 16px;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+  .timeline-edu {
+    padding: 20px;
+    padding-top: 40px;
+
+    width: auto; /* Make it take the full width of its container */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .line-edu {
+    width: 350px;
+    height: 3px;
+
+    background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 490px) {
+  .scroll-div {
+    padding-top: 930px;
+  }
+  .institutes {
+    width: auto;
+    font-size: 16px;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+  .timeline-edu {
+    padding: 5px;
+    padding-top: 40px;
+
+    width: auto; /* Make it take the full width of its container */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .edu-image {
+    width: 40px;
+    height: 40px;
+  }
+  .line-edu {
+    width: 115px;
+    height: 3px;
+
+    background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  .year {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .mobile-ui {
+    display: flex;
+  }
+  .timeline-job {
+    display: inline;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    padding-top: 40px;
+  }
+  .timeline-job {
+    display: inline;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    padding-top: 40px;
+    width: auto;
+  }
+  .line-job {
+    width: 5px;
+    height: 155px;
+    margin: auto;
+    background-color: black;
+    border-radius: 5px;
+  }
+  .dash-line {
+    width: 5px;
+    height: 5px;
+    margin: 2px auto 0 auto;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .company {
+    display: inline;
+  }
+  .job-information {
+    width: auto;
+  }
+  .company-image {
+    margin-left: -15px;
+  }
+  .job-title {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+  }
+  .jd {
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    width: 92%;
+  }
+  .jd-open {
+    font-family: 'Courier New', Courier, monospace;
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .mobile-ui-skill {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mobile-ui-skill-aws {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo {
+    top: 10%;
+    left: 40%;
+  }
+
+  .logo.python {
+    left: 40%; /* Final position (no change for Python) */
+    top: 10%;
+  }
+
+  .logo.django.animate {
+    left: 25%; /* Target position */
+    top: 50%;
+  }
+
+  .logo.vue.animate {
+    left: 28%;
+    top: 33%;
+  }
+
+  .logo.js.animate {
+    left: 59%;
+    top: 55%;
+  }
+
+  .logo.aws.animate {
+    left: 52%;
+    top: 80%;
+  }
+
+  .logo.git.animate {
+    left: 58%;
+    top: 28%;
+  }
+
+  .logo.postman.animate {
+    left: 20%;
+    top: 70%;
+  }
+  .all-projects {
+    width: 90%;
+  }
+  .project-block {
+    display: flex;
+    flex-direction: column; /* Ensure the elements are stacked vertically */
+  }
+
+  .image {
+    order: -1; /* Move the image div to come before the info div */
+  }
+
+  .info {
+    order: 0; /* Ensure the info div follows the image div */
+  }
+
+  .image-project {
+    height: 50px;
+    width: 50px;
+  }
+
+  .all-projects {
+    width: 90%;
+  }
+  .project-block {
+    margin: 15px auto 15px auto;
+  }
+
+  .info {
+    width: auto;
+    margin-top: 10px;
+  }
+  .project-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .project-desc {
+    font-size: 14px;
+  }
+  .tech-used {
+    font-size: 12px;
+  }
+
+  .logo-sm-mob {
+    width: 30px;
+    height: 30px;
+  }
+  .thank-you {
+    width: 80%;
+    height: fit-content;
+  }
+  .message {
+    font-size: 30px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .scroll-div {
+    padding-top: 800px;
+  }
+  .line-edu {
+    width: 90px;
+
+    height: 3px;
+  }
+  .institutes {
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .line-job {
+    width: 5px;
+    height: 172px;
+    margin: auto;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .project-block {
+    display: flex;
+    flex-direction: column; /* Ensure the elements are stacked vertically */
+  }
+
+  .image {
+    order: -1; /* Move the image div to come before the info div */
+  }
+
+  .info {
+    order: 0; /* Ensure the info div follows the image div */
+  }
+
+  .image-project {
+    height: 50px;
+    width: 50px;
+  }
+
+  .all-projects {
+    width: 90%;
+  }
+}
+</style>
